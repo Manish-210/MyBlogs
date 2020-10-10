@@ -12,7 +12,14 @@
 
     <h2>Site is working</h2>
     <div class="">
-      First post
+      {% for post in posts %}
+      <p>Published: {{post.published_date }}</p>
+      <h3>
+        <a href="#">{{post.title}}</a>
+      </h3>
+      <p>{{post.text|linebreaksbr}}</p>
+
+      {% endfor %}
     </div>
     <div class="">
       Second post
